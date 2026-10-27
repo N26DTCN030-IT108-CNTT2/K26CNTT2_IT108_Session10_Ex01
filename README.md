@@ -1,11 +1,9 @@
 # K26CNTT2_IT108_Session10_Ex01
-Bài tập 1
-Tại sao định dạng thủ công gây lỗi mục lục (Auto TOC)?
+### 1. Tại sao định dạng thủ công lại gây ra lỗi mục lục trống?
+- **Nguyên lý hoạt động của Auto TOC:** Chức năng tạo mục lục tự động (Auto TOC) trong Microsoft Word / Google Docs chỉ quét và thu thập các đoạn văn bản được gán nhãn **Heading Styles** (Heading 1, Heading 2, Heading 3,...).
+- **Lỗi sai của Nam:** Nam chỉ thay đổi hình thức bên ngoài (phóng to chữ size 20, 18, in đậm) nhưng về mặt bản chất hệ thống, các tiêu đề đó vẫn mang nhãn **Normal text**. Do đó, công cụ Auto TOC không nhận diện được đâu là tiêu đề để đưa vào bảng mục lục, dẫn đến thông báo lỗi *"No table of contents entries found"*.
+- **Hậu quả bổ sung:** Khi cần thay đổi màu sắc hay định dạng chung cho toàn bộ tiêu đề, Nam phải đi sửa thủ công từng trang một thay vì chỉ cần cập nhật Style đại diện.
 
-Nguyên nhân: Tính năng Tạo mục lục tự động (Table of Contents - TOC) trong Microsoft Word không nhận diện các tiêu đề được định dạng thủ công (như bôi đen, tăng cỡ chữ, in đậm). Word chỉ quét và tổng hợp các đoạn văn bản được áp dụng sẵn các kiểu định dạng có cấu trúc chuẩn sẵn là Heading 1, Heading 2, Heading 3...
-
-Do Nam dùng cách thủ công, Word coi toàn bộ các tiêu đề đó chỉ là các đoạn văn bản bình thường thuộc kiểu Normal, dẫn đến việc khi chèn mục lục, Word không tìm thấy tiêu đề nào và báo lỗi: "No table of contents entries found". Ngoài ra, khi thay đổi giao diện, bạn phải sửa từng cái bằng tay thay vì cập nhật tự động toàn bộ.
-
-Tại sao đoạn văn dài 5 trang lại hiện lên mục lục?
-
-Nguyên nhân: Nam đã vô tình áp dụng nhãn Heading 1 cho cả một đoạn văn bản dài thay vì chỉ gán cho dòng tiêu đề. Do Word mặc định đưa toàn bộ nội dung mang nhãn Heading vào bảng mục lục, nên khi cập nhật TOC, toàn bộ đoạn văn 5 trang đó bị gom vào làm mục lục, làm hỏng cấu trúc tài liệu.
+### 2. Nguyên nhân đoạn văn dài 5 trang bị hiện lên mục lục
+- **Lỗi gán nhãn sai:** Nam đã vô tình bôi đen toàn bộ đoạn văn bản dài 5 trang đó và chọn gán cho nó nhãn **Heading 1** thay vì nhãn **Normal**.
+- **Hậu quả:** Hệ thống Auto TOC sẽ hiểu toàn bộ 5 trang văn bản đó là một "Tiêu đề lớn" và trích xuất nguyên cả đoạn văn đó hiển thị vào bảng mục lục.
